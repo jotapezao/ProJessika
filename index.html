@@ -44,14 +44,14 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content container">
-                <h1 class="reveal-text">Arquitetura que conta<br><span class="gold-text">sua história.</span></h1>
+                <h1>Arquitetura que conta<br><span class="gold-text">sua história.</span></h1>
                 <p class="hero-subtitle">Design sofisticado, minimalista e funcional para ambientes exclusivos.</p>
                 <div class="hero-buttons">
                     <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
                     <a href="#contato" class="btn btn-secondary">Inicie seu Projeto</a>
                 </div>
             </div>
-            <div class="hero-overlay"></div>
+            <!-- O overlay e imagem de fundo são controlados via CSS agora para melhor performance -->
         </section>
 
         <!-- About Section -->
@@ -59,7 +59,7 @@
             <div class="container grid-2">
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                        alt="Jessika Rodrigues" class="img-reveal">
+                        alt="Jessika Rodrigues">
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Sobre Mim</h2>
@@ -79,7 +79,7 @@
         <section id="servicos" class="services section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Nossos Serviços</h2>
+                    <h2 class="section-title center">Nossos Serviços</h2>
                     <p>Soluções completas para arquitetura e interiores.</p>
                 </div>
                 <div class="services-grid">
@@ -115,14 +115,16 @@
                     <p>Uma seleção de projetos realizados com excelência.</p>
                 </div>
                 <div class="portfolio-grid">
+                    <!-- Item de Destaque (Ocupa 2 colunas no CSS) -->
                     <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800"
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200"
                             alt="Projeto Residencial Luxo">
                         <div class="portfolio-overlay">
                             <h3>Residência Golden</h3>
                             <span>Arquitetura de Alto Padrão</span>
                         </div>
                     </div>
+
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800"
                             alt="Interior Comercial Moderno">
@@ -140,7 +142,7 @@
                         </div>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800"
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800"
                             alt="Sala de Estar Integrada">
                         <div class="portfolio-overlay">
                             <h3>Living Integrado</h3>
