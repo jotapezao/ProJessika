@@ -4,36 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessika Rodrigues — Arquitetura e Interiores</title>
+
+    <!-- SEO & Meta Tags -->
+    <title>Jessika Rodrigues | Arquitetura Residencial e Interiores Sofisticados</title>
     <meta name="description"
-        content="Especialista em arquitetura e projetos de interiores. Design minimalista, sofisticado e de alto padrão. transformando espaços com criatividade e profissionalismo.">
+        content="Especialista em arquitetura residencial de alto padrão e interiores sofisticados. Projetos personalizados que unem estética, funcionalidade e exclusividade. Agende sua consultoria.">
+    <meta name="keywords"
+        content="arquiteta, arquitetura residencial, interiores sofisticados, projetos personalizados, design de interiores, reforma de alto padrão">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://projessika-production.up.railway.app/">
+    <meta property="og:title" content="Jessika Rodrigues - Arquitetura e Interiores">
+    <meta property="og:description"
+        content="Transformando espaços em experiências. Arquitetura minimalista e sofisticada.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-    <!-- Placeholder for icons -->
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Navigation -->
     <header id="header">
-        <nav class="container">
+        <nav class="container nav-container">
             <div class="logo">
-                <span class="name">Jessika Rodrigues</span>
-                <span class="tagline">Arquitetura e Interiores</span>
+                <a href="#home">
+                    <span class="logo-text">Jessika Rodrigues</span>
+                    <span class="logo-sub">Arquitetura</span>
+                </a>
             </div>
+
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#contato" class="btn-nav">Agende sua Consultoria</a></li>
             </ul>
+
             <div class="mobile-menu-btn">
-                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -41,180 +62,218 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Dobra Principal) -->
         <section id="home" class="hero">
-            <div class="hero-content container">
-                <h1>Arquitetura que conta<br><span class="gold-text">sua história.</span></h1>
-                <p class="hero-subtitle">Design sofisticado, minimalista e funcional para ambientes exclusivos.</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contato" class="btn btn-secondary">Inicie seu Projeto</a>
+            <div class="container hero-grid">
+                <div class="hero-text fade-in-up">
+                    <span class="eyebrow">Minimalismo & Sofisticação</span>
+                    <h1>A arquitetura que traduz a sua <span class="accent">essência</span>.</h1>
+                    <p class="hero-subtitle">Projetos residenciais e interiores exclusivos para quem busca elegância
+                        atemporal e funcionalidade.</p>
+                    <div class="hero-cta">
+                        <a href="#contato" class="btn btn-primary">Agende sua Consultoria</a>
+                        <a href="#portfolio" class="btn btn-link">Ver Portfolio <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-            </div>
-            <!-- O overlay e imagem de fundo são controlados via CSS agora para melhor performance -->
-        </section>
-
-        <!-- About Section -->
-        <section id="sobre" class="about section-padding">
-            <div class="container grid-2">
-                <div class="about-image">
+                <div class="hero-image-wrapper fade-in-up delay-200">
+                    <!-- Placeholder para a foto enviada pelo usuário -->
+                    <!-- Atenção: Substitua este src pelo caminho da sua foto vertical -->
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                        alt="Jessika Rodrigues">
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">Sobre Mim</h2>
-                    <p class="highlight">Especialista em transformar sonhos em espaços tangíveis e funcionais.</p>
-                    <p>Meu nome é Jessika Rodrigues, sou arquiteta apaixonada por design de interiores e arquitetura
-                        contemporânea. Meu trabalho é pautado na sofisticação do minimalismo e no cuidado com cada
-                        detalhe, garantindo que cada projeto reflita a personalidade e as necessidades dos meus
-                        clientes.</p>
-                    <p>Com um olhar atento às tendências globais e um compromisso com o alto padrão, busco criar
-                        ambientes que inspirem e proporcionem bem-estar, sempre com um toque de elegância e
-                        funcionalidade.</p>
+                        alt="Arquiteta Jessika Rodrigues" class="hero-img">
+                    <div class="hero-shape"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="servicos" class="services section-padding">
+        <!-- Portfolio Estratégico -->
+        <section id="portfolio" class="section-padding bg-light">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title center">Nossos Serviços</h2>
-                    <p>Soluções completas para arquitetura e interiores.</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <h3>Projetos Arquitetônicos</h3>
-                        <p>Planejamento completo de espaços residenciais e comerciais do zero.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-couch"></i>
-                        <h3>Interiores</h3>
-                        <p>Decoração e ambientação focada em estética e funcionalidade.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hard-hat"></i>
-                        <h3>Consultoria</h3>
-                        <p>Orientação estratégica para pequenas reformas e escolhas de acabamentos.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-drafting-compass"></i>
-                        <h3>Modelagem 3D</h3>
-                        <p>Visualização realista do seu projeto antes mesmo da execução.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio section-padding">
-            <div class="container">
-                <div class="section-header">
+                <div class="section-header center">
+                    <span class="section-tag">Obras Selecionadas</span>
                     <h2 class="section-title">Portfólio</h2>
-                    <p>Uma seleção de projetos realizados com excelência.</p>
                 </div>
-                <div class="portfolio-grid">
-                    <!-- Item de Destaque (Ocupa 2 colunas no CSS) -->
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200"
-                            alt="Projeto Residencial Luxo">
-                        <div class="portfolio-overlay">
+
+                <div class="portfolio-list">
+                    <!-- Projeto 1 -->
+                    <article class="project-item fade-in-up">
+                        <div class="project-image">
+                            <!-- Imagem Grande e Alta Qualidade -->
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1400"
+                                alt="Residência Golden" loading="lazy">
+                        </div>
+                        <div class="project-info">
                             <h3>Residência Golden</h3>
-                            <span>Arquitetura de Alto Padrão</span>
+                            <div class="project-meta">
+                                <div class="meta-block">
+                                    <h4>Desafio</h4>
+                                    <p>Integrar a área externa com o living mantendo a privacidade.</p>
+                                </div>
+                                <div class="meta-block">
+                                    <h4>Solução</h4>
+                                    <p>Uso de brises de madeira e portas de vidro pivotantes.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800"
-                            alt="Interior Comercial Moderno">
-                        <div class="portfolio-overlay">
+                    <!-- Projeto 2 -->
+                    <article class="project-item reverse fade-in-up">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1400"
+                                alt="Loft Minimalista" loading="lazy">
+                        </div>
+                        <div class="project-info">
                             <h3>Loft Minimalista</h3>
-                            <span>Design de Interiores</span>
+                            <div class="project-meta">
+                                <div class="meta-block">
+                                    <h4>Conceito</h4>
+                                    <p>Urban Jungle com paleta monocromática.</p>
+                                </div>
+                                <div class="meta-block">
+                                    <h4>Resultado</h4>
+                                    <p>Um ambiente fluido, iluminado e extremamente acolhedor.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1556911223-e45244199cff?auto=format&fit=crop&q=80&w=800"
-                            alt="Cozinha Sofisticada">
-                        <div class="portfolio-overlay">
-                            <h3>Cozinha Contemporânea</h3>
-                            <span>Interior Design</span>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-item fade-in-up">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1400"
+                                alt="Sala de Estar Integrada" loading="lazy">
                         </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800"
-                            alt="Sala de Estar Integrada">
-                        <div class="portfolio-overlay">
+                        <div class="project-info">
                             <h3>Living Integrado</h3>
-                            <span>Arquitetura de Interiores</span>
+                            <div class="project-meta">
+                                <div class="meta-block">
+                                    <h4>Objetivo</h4>
+                                    <p>Maximizar o espaço de convivência para receber amigos.</p>
+                                </div>
+                                <div class="meta-block">
+                                    <h4>Design</h4>
+                                    <p>Paleta neutra com texturas naturais e iluminação cênica.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                </div>
+
+                <div class="view-more-container center">
+                    <a href="https://instagram.com/jessika_arquitetura" target="_blank" class="btn btn-outline">Ver mais
+                        no Instagram</a>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimony" class="testimonials section-padding">
-            <div class="container">
-                <h2 class="section-title center">Depoimentos</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial-card">
-                        <p>"O projeto superou todas as nossas expectativas. A Jessika conseguiu captar exatamente o que
-                            queríamos e trouxe soluções que nunca teríamos imaginado."</p>
-                        <span class="client-name">— Maria Clara Santos</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Sobre Estratégico -->
+        <section id="sobre" class="section-padding">
+            <div class="container about-grid">
+                <div class="about-content fade-in-up">
+                    <span class="section-tag">Sobre Mim</span>
+                    <h2 class="section-title">Muito além do projeto.</h2>
+                    <p class="lead">Meu objetivo é materializar o estilo de vida dos meus clientes através de uma
+                        arquitetura sensorial e detalhista.</p>
+                    <p>Atuando no mercado de alto padrão, desenvolvi uma metodologia focada na escuta ativa e na
+                        personalização total. Acredito que o verdadeiro luxo está na harmonia entre a estética apurada e
+                        o conforto diário.</p>
 
-        <!-- Contact Section -->
-        <section id="contato" class="contact section-padding">
-            <div class="container grid-2">
-                <div class="contact-info">
-                    <h2 class="section-title">Vamos conversar?</h2>
-                    <p>Pronta para iniciar o projeto dos seus sonhos? Entre em contato e agende uma reunião.</p>
-                    <ul class="contact-details">
-                        <li><i class="fas fa-phone"></i> 65 996033051</li>
-                        <li><i class="fas fa-envelope"></i> arqjessika@gmail.com</li>
-                        <li><i class="fab fa-instagram"></i> @jessika_arquitetura</li>
+                    <ul class="differentials">
+                        <li><i class="fas fa-check"></i> Gestão completa da obra</li>
+                        <li><i class="fas fa-check"></i> Curadoria de mobiliário e acabamentos</li>
+                        <li><i class="fas fa-check"></i> Projetos 100% autorais e exclusivos</li>
                     </ul>
                 </div>
-                <div class="contact-form-container">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Nome Completo" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="E-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Fale um pouco sobre o seu projeto" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary full-width">Enviar Mensagem</button>
-                    </form>
+                <div class="about-visual fade-in-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                        alt="Ambiente de escritório sofisticado" loading="lazy">
                 </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos (Prova Social) -->
+        <section class="testimonials section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title center">O que dizem nossos clientes</h2>
+                <div class="testimonials-grid fade-in-up">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="quote">A Jessika captou nossa essência no primeiro briefing. O resultado foi uma casa
+                            que respira nossa identidade.</p>
+                        <span class="author">Ana & Carlos | Residência Alphaville</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="quote">Profissionalismo impecável e um bom gosto indiscutível. A reforma transformou
+                            completamente nosso apartamento.</p>
+                        <span class="author">Dr. Roberto Mendes | Apartamento Jardins</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="quote">Superou todas as expectativas. O acompanhamento da obra foi essencial para o
+                            sucesso do projeto.</p>
+                        <span class="author">Mariana S. | Loft Moderno</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact section-padding">
+            <div class="container contact-wrapper fade-in-up">
+                <div class="contact-header">
+                    <h2 class="section-title">Vamos criar algo único?</h2>
+                    <p>Entre em contato para agendar uma reunião inicial e discutir as possibilidades do seu novo
+                        espaço.</p>
+
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5565996033051" target="_blank" class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>(65) 99603-3051</span>
+                        </a>
+                        <a href="mailto:arqjessika@gmail.com" class="contact-method">
+                            <i class="far fa-envelope"></i>
+                            <span>arqjessika@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Seu WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Conte brevemente sobre seu projeto..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Solicitar Orçamento</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Jessika Rodrigues</h3>
-                    <span>Arquitetura e Interiores</span>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/jessika_arquitetura/?hl=pt" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5565996033051" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
+        <div class="container footer-flex">
+            <div class="footer-brand">
+                <h3>Jessika Rodrigues</h3>
+                <p>Arquitetura e Interiores</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Jessika Rodrigues. Todos os direitos reservados. Design by AI.</p>
+            <div class="footer-social">
+                <a href="https://instagram.com/jessika_arquitetura" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5565996033051" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Jessika Rodrigues. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5565996033051" class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="main.js"></script>
 </body>
