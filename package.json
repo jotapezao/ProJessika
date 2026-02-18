@@ -1,0 +1,12 @@
+{
+  "name": "projessika",
+  "version": "1.0.0",
+  "description": "Site Institucional Jessika Rodrigues",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
