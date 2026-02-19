@@ -1003,6 +1003,7 @@ header.scrolled {
     margin-bottom: 0.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1257,6 +1258,7 @@ header.scrolled {
     font-size: 0.95rem;
     transition: border-color 0.3s;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .form-group input:focus,

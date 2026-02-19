@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Paulo Fernandes | Desenvolvedor & Consultor de T.I.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --gold: #b8976a;
+            --bg: #0e0e0e;
+            --bg-card: #161616;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Background Decor */
+        .decor-blob {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(184, 151, 106, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        /* Header/Nav */
+        nav {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 6rem;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            filter: grayscale(20%);
+            transition: 0.5s;
+        }
+
+        .profile-img:hover {
+            filter: grayscale(0%);
+        }
+
+        .profile-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .hero-text h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        /* Services Grid */
+        .services {
+            padding-bottom: 8rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, transparent, #111, transparent);
+        }
+
+        .cta h3 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--gold);
+            color: #fff;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(184, 151, 106, 0.4);
+        }
+
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-frame {
+                margin: 0 auto;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="decor-blob"></div>
+
+    <div class="container">
+        <nav>
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao site da Jessika</a>
+        </nav>
+
+        <section class="hero">
+            <div class="profile-frame">
+                <img src="https://github.com/jotapezao/ProJessika/blob/main/devj.png?raw=true"
+                    alt="João Paulo Fernandes" class="profile-img">
+                <div class="profile-border"></div>
+            </div>
+            <div class="hero-text">
+                <h2>Soluções Tecnológicas</h2>
+                <h1>João Paulo Fernandes</h1>
+                <p>Especialista em transformar complexidade em elegância digital. De sistemas Full Stack a
+                    infraestruturas de rede avançadas, entrego tecnologia que impulsiona negócios e simplifica
+                    processos.</p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/5565992859585" target="_blank" class="btn">
+                        <i class="fab fa-whatsapp"></i> Iniciar Projeto
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2 class="section-title">Expertise & Serviços</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Sistemas Full Stack</h3>
+                    <p>Desenvolvimento de aplicações web completas, do banco de dados à interface premium.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Criação de Web Sites</h3>
+                    <p>Landing pages e sites institucionais com design responsivo e alta performance.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Redes & Infraestrutura</h3>
+                    <p>Redes avançadas, configuração de routers, switches e cabeamento estruturado.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h3>Consultoria de T.I.</h3>
+                    <p>Diagnóstico completo e implementação de soluções tecnológicas estratégicas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Segurança Digital</h3>
+                    <p>Proteção de dados e auditoria de infraestrutura para garantir continuidade.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Automação</h3>
+                    <p>Otimização de processos manuais através de scripts e sistemas inteligentes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3>Vamos elevar o nível da sua tecnologia?</h3>
+            <p style="color: #888; margin-bottom: 2rem;">Atendimento exclusivo em Cuiabá e região.</p>
+            <a href="https://wa.me/5565992859585" target="_blank" class="btn">Falar com João Paulo</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 João Paulo Fernandes • Cuiabá — MT</p>
+        </footer>
+    </div>
+</body>
+
+</html>
