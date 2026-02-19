@@ -5,27 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO & Meta Tags -->
-    <title>Jessika Rodrigues | Arquitetura Residencial e Interiores Sofisticados</title>
+    <!-- SEO -->
+    <title>Jessika Rodrigues | Arquitetura e Interiores em Cuiabá - MT</title>
     <meta name="description"
-        content="Especialista em arquitetura residencial de alto padrão e interiores sofisticados. Projetos personalizados que unem estética, funcionalidade e exclusividade. Agende sua consultoria.">
+        content="Arquiteta em Cuiabá especializada em projetos residenciais de alto padrão e design de interiores sofisticados. Residencial Jardim Itália, Florais Cuiabá, Belvedere e mais.">
     <meta name="keywords"
-        content="arquiteta, arquitetura residencial, interiores sofisticados, projetos personalizados, design de interiores, reforma de alto padrão">
+        content="arquiteta cuiabá, arquitetura residencial cuiabá, interiores sofisticados, projetos personalizados, design de interiores cuiabá, Jardim Itália, Florais Cuiabá">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://projessika-production.up.railway.app/">
-    <meta property="og:title" content="Jessika Rodrigues - Arquitetura e Interiores">
+    <meta property="og:title" content="Jessika Rodrigues — Arquitetura e Interiores">
     <meta property="og:description"
-        content="Transformando espaços em experiências. Arquitetura minimalista e sofisticada.">
+        content="Transformando sonhos em espaços extraordinários em Cuiabá. Projetos residenciais de alto padrão com design autoral e sofisticado.">
     <meta property="og:image"
         content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -36,236 +39,640 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <svg class="preloader-logo" viewBox="0 0 120 60" width="120" height="60">
+                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+                    font-family="'Playfair Display', serif" font-size="36" font-weight="500" fill="#b8976a">JR</text>
+            </svg>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <header id="header">
         <nav class="container nav-container">
-            <div class="logo">
-                <a href="#home">
-                    <span class="logo-text">Jessika Rodrigues</span>
-                    <span class="logo-sub">Arquitetura</span>
-                </a>
-            </div>
+            <!-- SVG Logo -->
+            <a href="#home" class="logo-link">
+                <svg class="logo-svg" viewBox="0 0 260 60" width="260" height="60">
+                    <!-- Monogram -->
+                    <text x="28" y="42" font-family="'Playfair Display', serif" font-size="40" font-weight="600"
+                        fill="#b8976a">JR</text>
+                    <!-- Divider Line -->
+                    <line x1="65" y1="10" x2="65" y2="50" stroke="#b8976a" stroke-width="0.5" opacity="0.6" />
+                    <!-- Name -->
+                    <text x="78" y="28" font-family="'Raleway', sans-serif" font-size="13" font-weight="400"
+                        fill="currentColor" letter-spacing="3">JESSIKA RODRIGUES</text>
+                    <!-- Subtitle -->
+                    <text x="78" y="45" font-family="'Raleway', sans-serif" font-size="8" font-weight="300"
+                        fill="#b8976a" letter-spacing="4">ARQUITETURA &amp; INTERIORES</text>
+                </svg>
+            </a>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato" class="btn-nav">Agende sua Consultoria</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato" class="btn-nav-cta">Fale Comigo</a></li>
             </ul>
 
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
+            <div class="mobile-menu-btn" id="mobileMenu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section (Dobra Principal) -->
+        <!-- ========== HERO SECTION ========== -->
         <section id="home" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-text fade-in-up">
-                    <span class="eyebrow">Minimalismo & Sofisticação</span>
-                    <h1>A arquitetura que traduz a sua <span class="accent">essência</span>.</h1>
-                    <p class="hero-subtitle">Projetos residenciais e interiores exclusivos para quem busca elegância
-                        atemporal e funcionalidade.</p>
-                    <div class="hero-cta">
-                        <a href="#contato" class="btn btn-primary">Agende sua Consultoria</a>
-                        <a href="#portfolio" class="btn btn-link">Ver Portfolio <i class="fas fa-arrow-right"></i></a>
+            <div class="hero-bg-overlay"></div>
+            <!-- Decorative Elements -->
+            <div class="hero-decor-line hero-decor-line-1"></div>
+            <div class="hero-decor-line hero-decor-line-2"></div>
+            <div class="hero-decor-corner hero-decor-corner-tl"></div>
+            <div class="hero-decor-corner hero-decor-corner-br"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Cuiabá — MT
+                    </span>
+                    <h1 class="hero-title">
+                        Transformando<br>
+                        espaços em<br>
+                        <span class="hero-title-accent">experiências.</span>
+                    </h1>
+                    <p class="hero-desc">Arquitetura residencial de alto padrão e design de interiores sofisticados.
+                        Cada projeto é uma obra única, pensada para refletir quem você é.</p>
+                    <div class="hero-actions">
+                        <a href="#contato" class="btn btn-gold">
+                            <span>Agende sua Consultoria</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#portfolio" class="btn btn-ghost">Ver Projetos</a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="85">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Projetos Entregues</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="8">0</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image-wrapper fade-in-up delay-200">
-                    <!-- Placeholder para a foto enviada pelo usuário -->
-                    <!-- Atenção: Substitua este src pelo caminho da sua foto vertical -->
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                        alt="Arquiteta Jessika Rodrigues" class="hero-img">
-                    <div class="hero-shape"></div>
+
+                <div class="hero-image-col">
+                    <div class="hero-photo-frame">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                            alt="Arquiteta Jessika Rodrigues" class="hero-photo">
+                        <div class="hero-photo-border"></div>
+                        <div class="hero-photo-label">
+                            <span>Jessika Rodrigues</span>
+                            <small>CAU/MT</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ========== MARQUEE ========== -->
+        <div class="marquee-section">
+            <div class="marquee-track">
+                <span>Arquitetura Residencial</span>
+                <span class="marquee-dot">◆</span>
+                <span>Design de Interiores</span>
+                <span class="marquee-dot">◆</span>
+                <span>Projetos Personalizados</span>
+                <span class="marquee-dot">◆</span>
+                <span>Alto Padrão</span>
+                <span class="marquee-dot">◆</span>
+                <span>Cuiabá — MT</span>
+                <span class="marquee-dot">◆</span>
+                <span>Arquitetura Residencial</span>
+                <span class="marquee-dot">◆</span>
+                <span>Design de Interiores</span>
+                <span class="marquee-dot">◆</span>
+                <span>Projetos Personalizados</span>
+                <span class="marquee-dot">◆</span>
+                <span>Alto Padrão</span>
+                <span class="marquee-dot">◆</span>
+                <span>Cuiabá — MT</span>
+                <span class="marquee-dot">◆</span>
+            </div>
+        </div>
+
+        <!-- ========== SOBRE ========== -->
+        <section id="sobre" class="sobre-section">
+            <div class="container">
+                <div class="sobre-grid">
+                    <div class="sobre-image-col reveal-left">
+                        <div class="sobre-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800"
+                                alt="Escritório Jessika Rodrigues" loading="lazy">
+                            <div class="sobre-img-accent"></div>
+                        </div>
+                        <div class="sobre-experience-badge">
+                            <span class="exp-number">8+</span>
+                            <span class="exp-text">Anos transformando<br>ambientes em Cuiabá</span>
+                        </div>
+                    </div>
+
+                    <div class="sobre-content reveal-right">
+                        <span class="section-tag">Sobre Mim</span>
+                        <h2 class="section-title-lg">Cada espaço<br>conta uma história.</h2>
+                        <div class="sobre-divider"></div>
+                        <p class="sobre-lead">Sou Jessika Rodrigues, arquiteta e designer de interiores apaixonada por
+                            criar ambientes que transcendem o convencional.</p>
+                        <p>Atuando em Cuiabá e região, meu trabalho é guiado pela busca incessante da perfeição nos
+                            detalhes e pela sensibilidade de entender as necessidades de cada cliente. Cada projeto é
+                            uma jornada única, do conceito à entrega.</p>
+
+                        <div class="sobre-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                                <div>
+                                    <h4>Design Autoral</h4>
+                                    <p>Projetos 100% exclusivos e personalizados</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+                                <div>
+                                    <h4>Gestão Completa</h4>
+                                    <p>Do projeto à entrega das chaves</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                                <div>
+                                    <h4>Alto Padrão</h4>
+                                    <p>Materiais e acabamentos premium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Estratégico -->
-        <section id="portfolio" class="section-padding bg-light">
+        <!-- ========== SERVIÇOS ========== -->
+        <section id="servicos" class="servicos-section">
             <div class="container">
-                <div class="section-header center">
-                    <span class="section-tag">Obras Selecionadas</span>
-                    <h2 class="section-title">Portfólio</h2>
+                <div class="section-header-centered reveal-up">
+                    <span class="section-tag">O Que Fazemos</span>
+                    <h2 class="section-title-lg">Serviços</h2>
+                    <p class="section-subtitle">Soluções completas em arquitetura e interiores para transformar seu
+                        sonho em realidade.</p>
                 </div>
 
-                <div class="portfolio-list">
-                    <!-- Projeto 1 -->
-                    <article class="project-item fade-in-up">
-                        <div class="project-image">
-                            <!-- Imagem Grande e Alta Qualidade -->
-                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1400"
-                                alt="Residência Golden" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Residência Golden</h3>
-                            <div class="project-meta">
-                                <div class="meta-block">
-                                    <h4>Desafio</h4>
-                                    <p>Integrar a área externa com o living mantendo a privacidade.</p>
-                                </div>
-                                <div class="meta-block">
-                                    <h4>Solução</h4>
-                                    <p>Uso de brises de madeira e portas de vidro pivotantes.</p>
+                <div class="servicos-grid">
+                    <div class="servico-card reveal-up">
+                        <div class="servico-number">01</div>
+                        <div class="servico-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Projetos Arquitetônicos</h3>
+                        <p>Do conceito à execução. Projetos residenciais completos com plantas, cortes, fachadas e todo
+                            o detalhamento técnico necessário.</p>
+                        <div class="servico-line"></div>
+                    </div>
+                    <div class="servico-card reveal-up" style="transition-delay: 0.1s">
+                        <div class="servico-number">02</div>
+                        <div class="servico-icon"><i class="fas fa-couch"></i></div>
+                        <h3>Design de Interiores</h3>
+                        <p>Ambientação completa com curadoria de mobiliário, iluminação, revestimentos e objetos
+                            decorativos de alto padrão.</p>
+                        <div class="servico-line"></div>
+                    </div>
+                    <div class="servico-card reveal-up" style="transition-delay: 0.2s">
+                        <div class="servico-number">03</div>
+                        <div class="servico-icon"><i class="fas fa-cube"></i></div>
+                        <h3>Modelagem 3D</h3>
+                        <p>Visualize seu projeto com renderizações realistas e passeios virtuais antes do início da
+                            obra. Sem surpresas.</p>
+                        <div class="servico-line"></div>
+                    </div>
+                    <div class="servico-card reveal-up" style="transition-delay: 0.3s">
+                        <div class="servico-number">04</div>
+                        <div class="servico-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>Reforma & Consultoria</h3>
+                        <p>Orientação especializada para reformas, escolha de acabamentos e otimização de espaços
+                            existentes.</p>
+                        <div class="servico-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PORTFOLIO ========== -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-header-centered reveal-up">
+                    <span class="section-tag">Nosso Portfólio</span>
+                    <h2 class="section-title-lg">Projetos em Destaque</h2>
+                    <p class="section-subtitle">Uma seleção dos nossos melhores projetos realizados em Cuiabá e região.
+                    </p>
+                </div>
+
+                <!-- Portfolio Filter -->
+                <div class="portfolio-filters reveal-up">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="residencial">Residencial</button>
+                    <button class="filter-btn" data-filter="interiores">Interiores</button>
+                    <button class="filter-btn" data-filter="comercial">Comercial</button>
+                </div>
+
+                <div class="portfolio-masonry">
+                    <!-- Projeto 1 - Destaque Grande -->
+                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="residencial">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200"
+                                alt="Residencial Jardim Itália II" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Residencial</span>
+                                    <h3>Residencial Jardim Itália II</h3>
+                                    <p>380m² · Projeto completo com piscina em deck de madeira, fachada em concreto
+                                        aparente e paisagismo tropical.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim
+                                        Itália, Cuiabá</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Projeto 2 -->
-                    <article class="project-item reverse fade-in-up">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1400"
-                                alt="Loft Minimalista" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Loft Minimalista</h3>
-                            <div class="project-meta">
-                                <div class="meta-block">
-                                    <h4>Conceito</h4>
-                                    <p>Urban Jungle com paleta monocromática.</p>
-                                </div>
-                                <div class="meta-block">
-                                    <h4>Resultado</h4>
-                                    <p>Um ambiente fluido, iluminado e extremamente acolhedor.</p>
+                    <div class="portfolio-card reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+                                alt="Loft Florais Cuiabá" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Loft Florais Cuiabá</h3>
+                                    <p>Living integrado com pé-direito duplo e iluminação cênica.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Florais
+                                        Cuiabá</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Projeto 3 -->
-                    <article class="project-item fade-in-up">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1400"
-                                alt="Sala de Estar Integrada" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Living Integrado</h3>
-                            <div class="project-meta">
-                                <div class="meta-block">
-                                    <h4>Objetivo</h4>
-                                    <p>Maximizar o espaço de convivência para receber amigos.</p>
-                                </div>
-                                <div class="meta-block">
-                                    <h4>Design</h4>
-                                    <p>Paleta neutra com texturas naturais e iluminação cênica.</p>
+                    <div class="portfolio-card reveal-up" data-category="residencial">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+                                alt="Casa Belvedere" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Residencial</span>
+                                    <h3>Casa Belvedere</h3>
+                                    <p>520m² de sofisticação com fachada moderna e área gourmet integrada.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i>
+                                        Condomínio Belvedere, Cuiabá</span>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
+                    </div>
 
-                <div class="view-more-container center">
-                    <a href="https://instagram.com/jessika_arquitetura" target="_blank" class="btn btn-outline">Ver mais
-                        no Instagram</a>
+                    <!-- Projeto 4 -->
+                    <div class="portfolio-card reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800"
+                                alt="Sala de Estar Alphaville" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Living Alphaville</h3>
+                                    <p>Sala de estar com paleta neutra, madeira de demolição e mármore travertino.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i>
+                                        Alphaville Cuiabá</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="portfolio-card reveal-up" data-category="residencial">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=800"
+                                alt="Residência Parque das Águas" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Residencial</span>
+                                    <h3>Residência Parque das Águas</h3>
+                                    <p>Casa térrea com 4 suítes e linguagem contemporânea.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Parque
+                                        das Águas, Cuiabá</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 - Grande -->
+                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200"
+                                alt="Penthouse Jardim das Américas" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Penthouse Jardim das Américas</h3>
+                                    <p>Cobertura duplex com vista panorâmica, cozinha gourmet e terraço com cascata
+                                        decorativa.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim
+                                        das Américas, Cuiabá</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 7 -->
+                    <div class="portfolio-card reveal-up" data-category="comercial">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                                alt="Escritório Boulevard" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Comercial</span>
+                                    <h3>Escritório Boulevard Shopping</h3>
+                                    <p>Sala comercial moderna com design biofílico e ergonômico.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Av. do
+                                        CPA, Cuiabá</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 8 -->
+                    <div class="portfolio-card reveal-up" data-category="residencial">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=800"
+                                alt="Casa Bosque da Saúde" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Residencial</span>
+                                    <h3>Casa Bosque da Saúde</h3>
+                                    <p>Concreto, vidro e jardim vertical: uma residência sustentável e elegante.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Bosque
+                                        da Saúde, Cuiabá</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sobre Estratégico -->
-        <section id="sobre" class="section-padding">
-            <div class="container about-grid">
-                <div class="about-content fade-in-up">
-                    <span class="section-tag">Sobre Mim</span>
-                    <h2 class="section-title">Muito além do projeto.</h2>
-                    <p class="lead">Meu objetivo é materializar o estilo de vida dos meus clientes através de uma
-                        arquitetura sensorial e detalhista.</p>
-                    <p>Atuando no mercado de alto padrão, desenvolvi uma metodologia focada na escuta ativa e na
-                        personalização total. Acredito que o verdadeiro luxo está na harmonia entre a estética apurada e
-                        o conforto diário.</p>
-
-                    <ul class="differentials">
-                        <li><i class="fas fa-check"></i> Gestão completa da obra</li>
-                        <li><i class="fas fa-check"></i> Curadoria de mobiliário e acabamentos</li>
-                        <li><i class="fas fa-check"></i> Projetos 100% autorais e exclusivos</li>
-                    </ul>
-                </div>
-                <div class="about-visual fade-in-up delay-200">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
-                        alt="Ambiente de escritório sofisticado" loading="lazy">
-                </div>
+        <!-- ========== CTA PARALLAX ========== -->
+        <section class="cta-parallax">
+            <div class="cta-parallax-overlay"></div>
+            <div class="container cta-parallax-content reveal-up">
+                <h2>Pronto para transformar seu espaço?</h2>
+                <p>O primeiro passo é uma conversa. Vamos entender seu sonho e criar algo extraordinário juntos.</p>
+                <a href="#contato" class="btn btn-gold btn-lg">
+                    <span>Quero iniciar meu projeto</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </section>
 
-        <!-- Depoimentos (Prova Social) -->
-        <section class="testimonials section-padding bg-light">
+        <!-- ========== DEPOIMENTOS ========== -->
+        <section id="depoimentos" class="depoimentos-section">
             <div class="container">
-                <h2 class="section-title center">O que dizem nossos clientes</h2>
-                <div class="testimonials-grid fade-in-up">
-                    <div class="testimonial-card">
-                        <div class="quote-icon">“</div>
-                        <p class="quote">A Jessika captou nossa essência no primeiro briefing. O resultado foi uma casa
-                            que respira nossa identidade.</p>
-                        <span class="author">Ana & Carlos | Residência Alphaville</span>
+                <div class="section-header-centered reveal-up">
+                    <span class="section-tag">Prova Social</span>
+                    <h2 class="section-title-lg">O que dizem nossos clientes</h2>
+                </div>
+
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card reveal-up">
+                        <div class="depoimento-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="depoimento-text">"A Jessika transformou completamente a nossa casa no Jardim Itália. O
+                            projeto ficou exatamente como sonhávamos — sofisticado e aconchegante."</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">AC</div>
+                            <div>
+                                <strong>Ana & Carlos Mendonça</strong>
+                                <span>Residencial Jardim Itália II</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon">“</div>
-                        <p class="quote">Profissionalismo impecável e um bom gosto indiscutível. A reforma transformou
-                            completamente nosso apartamento.</p>
-                        <span class="author">Dr. Roberto Mendes | Apartamento Jardins</span>
+
+                    <div class="depoimento-card reveal-up" style="transition-delay: 0.1s">
+                        <div class="depoimento-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="depoimento-text">"Profissionalismo impecável! Cada detalhe foi pensado com cuidado.
+                            Superou todas as expectativas. Recomendo de olhos fechados."</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">RM</div>
+                            <div>
+                                <strong>Dr. Roberto Matsumoto</strong>
+                                <span>Condomínio Florais Cuiabá</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon">“</div>
-                        <p class="quote">Superou todas as expectativas. O acompanhamento da obra foi essencial para o
-                            sucesso do projeto.</p>
-                        <span class="author">Mariana S. | Loft Moderno</span>
+
+                    <div class="depoimento-card reveal-up" style="transition-delay: 0.2s">
+                        <div class="depoimento-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="depoimento-text">"O acompanhamento do projeto foi excelente. A Jessika trouxe soluções
+                            criativas que otimizaram nosso investimento e elevaram o padrão da obra."</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">PS</div>
+                            <div>
+                                <strong>Patricia & Sergio Almeida</strong>
+                                <span>Condomínio Belvedere</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contato -->
-        <section id="contato" class="contact section-padding">
-            <div class="container contact-wrapper fade-in-up">
-                <div class="contact-header">
-                    <h2 class="section-title">Vamos criar algo único?</h2>
-                    <p>Entre em contato para agendar uma reunião inicial e discutir as possibilidades do seu novo
-                        espaço.</p>
+        <!-- ========== CONTATO ========== -->
+        <section id="contato" class="contato-section">
+            <div class="container">
+                <div class="contato-wrapper">
+                    <div class="contato-info reveal-left">
+                        <span class="section-tag">Entre em Contato</span>
+                        <h2 class="section-title-lg">Vamos criar<br>algo incrível<br><span
+                                class="text-gold">juntos.</span></h2>
+                        <p>Estou pronta para ouvir sua história e transformar sua visão em um projeto excepcional. O
+                            primeiro passo é uma conversa.</p>
 
-                    <div class="contact-methods">
-                        <a href="https://wa.me/5565996033051" target="_blank" class="contact-method">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>(65) 99603-3051</span>
-                        </a>
-                        <a href="mailto:arqjessika@gmail.com" class="contact-method">
-                            <i class="far fa-envelope"></i>
-                            <span>arqjessika@gmail.com</span>
-                        </a>
+                        <div class="contato-channels">
+                            <a href="https://wa.me/5565996033051" target="_blank" class="contato-channel">
+                                <div class="channel-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <span>(65) 99603-3051</span>
+                                </div>
+                            </a>
+                            <a href="mailto:arqjessika@gmail.com" class="contato-channel">
+                                <div class="channel-icon"><i class="far fa-envelope"></i></div>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <span>arqjessika@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/jessika_arquitetura" target="_blank" class="contato-channel">
+                                <div class="channel-icon instagram-icon"><i class="fab fa-instagram"></i></div>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <span>@jessika_arquitetura</span>
+                                </div>
+                            </a>
+                            <div class="contato-channel">
+                                <div class="channel-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <strong>Localização</strong>
+                                    <span>Cuiabá, Mato Grosso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contato-form-wrapper reveal-right">
+                        <div class="contato-form-card">
+                            <h3>Solicite seu Orçamento</h3>
+                            <p>Preencha o formulário abaixo e responderei em até 24h.</p>
+
+                            <!-- FormSubmit.co - Envia direto para o email -->
+                            <form action="https://formsubmit.co/arqjessika@gmail.com" method="POST" class="contato-form"
+                                id="contactForm">
+                                <!-- Config FormSubmit -->
+                                <input type="hidden" name="_subject"
+                                    value="Novo contato pelo site - Jessika Rodrigues Arquitetura">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="box">
+                                <input type="hidden" name="_next"
+                                    value="https://projessika-production.up.railway.app/#contato">
+                                <input type="text" name="_honey" style="display:none">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nome">Nome Completo</label>
+                                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefone">WhatsApp</label>
+                                        <input type="tel" id="telefone" name="whatsapp" placeholder="(65) 99999-9999"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tipo">Tipo de Projeto</label>
+                                    <select id="tipo" name="tipo_projeto">
+                                        <option value="" disabled selected>Selecione uma opção</option>
+                                        <option value="Casa Nova">Construção de Casa</option>
+                                        <option value="Interiores">Design de Interiores</option>
+                                        <option value="Reforma">Reforma</option>
+                                        <option value="Comercial">Projeto Comercial</option>
+                                        <option value="Consultoria">Consultoria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensagem">Mensagem</label>
+                                    <textarea id="mensagem" name="mensagem" rows="4"
+                                        placeholder="Conte brevemente sobre seu projeto, localização e expectativas..."
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold btn-submit full-width">
+                                    <span>Enviar Mensagem</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu Nome" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Seu WhatsApp" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Conte brevemente sobre seu projeto..." rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width">Solicitar Orçamento</button>
-                </form>
             </div>
         </section>
     </main>
 
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="container footer-flex">
-            <div class="footer-brand">
-                <h3>Jessika Rodrigues</h3>
-                <p>Arquitetura e Interiores</p>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" viewBox="0 0 260 60" width="200" height="50">
+                        <text x="28" y="42" font-family="'Playfair Display', serif" font-size="40" font-weight="600"
+                            fill="#b8976a">JR</text>
+                        <line x1="65" y1="10" x2="65" y2="50" stroke="#b8976a" stroke-width="0.5" opacity="0.6" />
+                        <text x="78" y="28" font-family="'Raleway', sans-serif" font-size="13" font-weight="400"
+                            fill="#ffffff" letter-spacing="3">JESSIKA RODRIGUES</text>
+                        <text x="78" y="45" font-family="'Raleway', sans-serif" font-size="8" font-weight="300"
+                            fill="#b8976a" letter-spacing="4">ARQUITETURA &amp; INTERIORES</text>
+                    </svg>
+                    <p>Transformando espaços em experiências extraordinárias em Cuiabá e região.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="#home">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#portfolio">Projetos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <a href="#servicos">Projetos Arquitetônicos</a>
+                    <a href="#servicos">Design de Interiores</a>
+                    <a href="#servicos">Modelagem 3D</a>
+                    <a href="#servicos">Reforma & Consultoria</a>
+                </div>
+
+                <div class="footer-social-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/jessika_arquitetura" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5565996033051" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:arqjessika@gmail.com"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-social">
-                <a href="https://instagram.com/jessika_arquitetura" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/5565996033051" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <div class="footer-copy">
-                <p>&copy; 2026 Jessika Rodrigues. Todos os direitos reservados.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jessika Rodrigues Arquitetura. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fas fa-heart" style="color:#b8976a"></i> em Cuiabá — MT</p>
             </div>
         </div>
     </footer>
@@ -273,6 +680,7 @@
     <!-- WhatsApp Flutuante -->
     <a href="https://wa.me/5565996033051" class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-pulse"></span>
     </a>
 
     <script src="main.js"></script>
