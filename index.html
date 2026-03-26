@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -38,6 +38,9 @@
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
@@ -94,6 +97,7 @@
         <!-- ========== HERO SECTION ========== -->
         <section id="home" class="hero">
             <div class="hero-bg-overlay"></div>
+            <div class="hero-grid"></div>
             <!-- Decorative Elements -->
             <div class="hero-decor-line hero-decor-line-1"></div>
             <div class="hero-decor-line hero-decor-line-2"></div>
@@ -129,7 +133,7 @@
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="8">0</span>
+                            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
                             <span class="stat-label">Anos de Experiência</span>
                         </div>
                         <div class="stat-divider"></div>
@@ -197,7 +201,7 @@
                             <div class="sobre-img-accent"></div>
                         </div>
                         <div class="sobre-experience-badge">
-                            <span class="exp-number">8+</span>
+                            <span class="exp-number">10+</span>
                             <span class="exp-text">Anos transformando<br>ambientes em Cuiabá</span>
                         </div>
                     </div>
@@ -206,32 +210,37 @@
                         <span class="section-tag">Sobre Mim</span>
                         <h2 class="section-title-lg">Cada espaço<br>conta uma história.</h2>
                         <div class="sobre-divider"></div>
-                        <p class="sobre-lead">Sou Jessika Rodrigues, arquiteta e designer de interiores apaixonada por
-                            criar ambientes que transcendem o convencional.</p>
-                        <p>Atuando em Cuiabá e região, meu trabalho é guiado pela busca incessante da perfeição nos
-                            detalhes e pela sensibilidade de entender as necessidades de cada cliente. Cada projeto é
-                            uma jornada única, do conceito à entrega.</p>
+                        <p class="sobre-lead">Sou Jessika Rodrigues, arquiteta e urbanista formada pela <strong>UNIC</strong> (Universidade de Cuiabá) em <strong>2020</strong>, com mais de <strong>10 anos de experiência</strong> atuando como projetista de interiores.</p>
+                        <p>Minha trajetória começou muito antes da graduação — movida pela paixão por transformar ambientes, desenvolvi ao longo de uma década um olhar refinado para design de interiores, combinando funcionalidade, estética e personalidade em cada projeto.</p>
+                        <p>Hoje, ofereço uma atuação completa: desde <strong>projetos arquitetônicos residenciais e comerciais</strong> até o <strong>design de interiores detalhado</strong>, com curadoria de materiais, mobiliário e iluminação. Cada espaço que crio é pensado para refletir a essência de quem o habita.</p>
 
                         <div class="sobre-features">
                             <div class="feature-item">
-                                <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                                <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
                                 <div>
-                                    <h4>Design Autoral</h4>
-                                    <p>Projetos 100% exclusivos e personalizados</p>
+                                    <h4>Formação Acadêmica</h4>
+                                    <p>Arquitetura e Urbanismo — UNIC 2020</p>
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+                                <div class="feature-icon"><i class="fas fa-gem"></i></div>
                                 <div>
-                                    <h4>Gestão Completa</h4>
-                                    <p>Do projeto à entrega das chaves</p>
+                                    <h4>Design de Interiores</h4>
+                                    <p>+10 anos projetando ambientes sofisticados</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-drafting-compass"></i></div>
+                                <div>
+                                    <h4>Projetos Completos</h4>
+                                    <p>Arquitetônico, interiores e acompanhamento de obra</p>
                                 </div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon"><i class="fas fa-award"></i></div>
                                 <div>
                                     <h4>Alto Padrão</h4>
-                                    <p>Materiais e acabamentos premium</p>
+                                    <p>Curadoria de materiais e acabamentos premium</p>
                                 </div>
                             </div>
                         </div>
@@ -287,158 +296,194 @@
             </div>
         </section>
 
+        <!-- ========== PROCESSO ========== -->
+        <section id="processo" class="processo-section">
+            <div class="container">
+                <div class="section-header-centered reveal-up">
+                    <span class="section-tag">Como Trabalhamos</span>
+                    <h2 class="section-title-lg">Nosso Processo</h2>
+                    <p class="section-subtitle">Uma jornada cuidadosa do primeiro encontro à entrega das chaves.</p>
+                </div>
+
+                <div class="processo-timeline">
+                    <div class="processo-line"></div>
+                    <div class="processo-step reveal-up">
+                        <div class="processo-step-number">01</div>
+                        <div class="processo-step-content">
+                            <div class="processo-step-icon"><i class="fas fa-comments"></i></div>
+                            <h3>Briefing</h3>
+                            <p>Entendemos seus desejos, necessidades e estilo de vida para criar um projeto que seja a sua cara.</p>
+                        </div>
+                    </div>
+                    <div class="processo-step reveal-up" style="transition-delay: 0.15s">
+                        <div class="processo-step-number">02</div>
+                        <div class="processo-step-content">
+                            <div class="processo-step-icon"><i class="fas fa-pencil-ruler"></i></div>
+                            <h3>Projeto</h3>
+                            <p>Desenvolvemos o conceito, plantas, fachadas e todo o detalhamento técnico com excelência.</p>
+                        </div>
+                    </div>
+                    <div class="processo-step reveal-up" style="transition-delay: 0.3s">
+                        <div class="processo-step-number">03</div>
+                        <div class="processo-step-content">
+                            <div class="processo-step-icon"><i class="fas fa-cube"></i></div>
+                            <h3>Visualização 3D</h3>
+                            <p>Renderizações fotorrealistas para você visualizar cada detalhe antes da execução.</p>
+                        </div>
+                    </div>
+                    <div class="processo-step reveal-up" style="transition-delay: 0.45s">
+                        <div class="processo-step-number">04</div>
+                        <div class="processo-step-content">
+                            <div class="processo-step-icon"><i class="fas fa-hard-hat"></i></div>
+                            <h3>Execução</h3>
+                            <p>Acompanhamento completo da obra, garantindo qualidade e fidelidade ao projeto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== PORTFOLIO ========== -->
         <section id="portfolio" class="portfolio-section">
             <div class="container">
                 <div class="section-header-centered reveal-up">
                     <span class="section-tag">Nosso Portfólio</span>
                     <h2 class="section-title-lg">Projetos em Destaque</h2>
-                    <p class="section-subtitle">Uma seleção dos nossos melhores projetos realizados em Cuiabá e região.
-                    </p>
+                    <p class="section-subtitle">Uma seleção dos nossos melhores projetos realizados em Cuiabá e região.</p>
                 </div>
 
                 <!-- Portfolio Filter -->
                 <div class="portfolio-filters reveal-up">
                     <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="residencial">Residencial</button>
                     <button class="filter-btn" data-filter="interiores">Interiores</button>
+                    <button class="filter-btn" data-filter="lazer">Área de Lazer</button>
                     <button class="filter-btn" data-filter="comercial">Comercial</button>
                 </div>
 
                 <div class="portfolio-masonry">
-                    <!-- Projeto 1 - Destaque Grande -->
-                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="residencial">
+                    <!-- Projeto 1 - Destaque Grande - Condomínio Rio Coxipó -->
+                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="interiores">
                         <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200"
+                            <img src="Imagens Projetos/Condomínio Rio Coxipó - Cuiaba - MT - PROJETO INTERIOR/Condomínio Rio Coxipó - Cuiaba - MT - PROJETO INTERIOR.png"
+                                alt="Condomínio Rio Coxipó — Projeto Interior" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Condomínio Rio Coxipó</h3>
+                                    <p>Living contemporâneo com painel 3D texturizado, ripado em madeira natural e iluminação cênica em LED embutido.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Rio Coxipó, Cuiabá — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 - Florais dos Lagos - Área de Lazer -->
+                    <div class="portfolio-card reveal-up" data-category="lazer">
+                        <div class="portfolio-card-img">
+                            <img src="Imagens Projetos/Florais dos lagos -Area de lazer  Cuiaba - MT/7dbdace0-97ac-4472-affd-83a410cf3ad5.png"
+                                alt="Florais dos Lagos — Área de Lazer" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Área de Lazer</span>
+                                    <h3>Florais dos Lagos</h3>
+                                    <p>Espaço gourmet com churrasqueira, balcão em pedra rústica e banquetas Bertoia em aço inox.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Florais dos Lagos, Cuiabá — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 - Chapada Living -->
+                    <div class="portfolio-card reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="Imagens Projetos/Projeto Interiores - Chapada/Projeto interiores Living - Cliente em Chapada dos Guimaroes.png"
+                                alt="Projeto Interiores Living — Chapada dos Guimarães" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Living Chapada dos Guimarães</h3>
+                                    <p>Marcenaria planejada com adega embutida, espelhamento e acabamento em madeira natural.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Chapada dos Guimarães — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 - Chapada Cozinha Gourmet -->
+                    <div class="portfolio-card reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="Imagens Projetos/Projeto Interiores - Chapada/Projeto interiores cozinha gourmet - Cliente em Chapada dos Guimaroes.png"
+                                alt="Cozinha Gourmet — Chapada dos Guimarães" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Interiores</span>
+                                    <h3>Cozinha Gourmet — Chapada</h3>
+                                    <p>Cozinha integrada com ilha em mármore, bancada em madeira maciça e jardim privativo com iluminação natural.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Chapada dos Guimarães — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 - Loja Petit Lulu - Grande -->
+                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="comercial">
+                        <div class="portfolio-card-img">
+                            <img src="Imagens Projetos/Projetooja petitlulu - Chapada dos Guimaroes - MT -/134d98f0-9fd1-44b2-89be-2714b2352641.png"
+                                alt="Loja Petit Lulu — Chapada dos Guimarães" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Comercial</span>
+                                    <h3>Loja Petit Lulu</h3>
+                                    <p>Boutique infantil com layout funcional, lustres em cristal e mobiliário em MDF premium com acabamento sofisticado.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Chapada dos Guimarães — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 - Loja Petit Lulu vista 2 -->
+                    <div class="portfolio-card reveal-up" data-category="comercial">
+                        <div class="portfolio-card-img">
+                            <img src="Imagens Projetos/Projetooja petitlulu - Chapada dos Guimaroes - MT -/9e6cd11a-25a6-45b0-babf-4f877422a436.png"
+                                alt="Loja Petit Lulu — Vista Interior" loading="lazy">
+                            <div class="portfolio-card-overlay">
+                                <div class="portfolio-card-info">
+                                    <span class="portfolio-card-tag">Comercial</span>
+                                    <h3>Petit Lulu — Interior</h3>
+                                    <p>Design comercial com iluminação cênica, vitrines integradas e identidade visual elegante.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Chapada dos Guimarães — MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 7 - Residencial Jardim Itália (existente, mantido para volume) -->
+                    <div class="portfolio-card reveal-up" data-category="interiores">
+                        <div class="portfolio-card-img">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800"
                                 alt="Residencial Jardim Itália II" loading="lazy">
                             <div class="portfolio-card-overlay">
                                 <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Residencial</span>
+                                    <span class="portfolio-card-tag">Interiores</span>
                                     <h3>Residencial Jardim Itália II</h3>
-                                    <p>380m² · Projeto completo com piscina em deck de madeira, fachada em concreto
-                                        aparente e paisagismo tropical.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim
-                                        Itália, Cuiabá</span>
+                                    <p>380m² · Projeto completo com piscina, fachada em concreto aparente e paisagismo tropical.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim Itália, Cuiabá</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Projeto 2 -->
+                    <!-- Projeto 8 - Penthouse (existente, mantido para volume) -->
                     <div class="portfolio-card reveal-up" data-category="interiores">
                         <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
-                                alt="Loft Florais Cuiabá" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Interiores</span>
-                                    <h3>Loft Florais Cuiabá</h3>
-                                    <p>Living integrado com pé-direito duplo e iluminação cênica.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Florais
-                                        Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 3 -->
-                    <div class="portfolio-card reveal-up" data-category="residencial">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
-                                alt="Casa Belvedere" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Residencial</span>
-                                    <h3>Casa Belvedere</h3>
-                                    <p>520m² de sofisticação com fachada moderna e área gourmet integrada.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i>
-                                        Condomínio Belvedere, Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 4 -->
-                    <div class="portfolio-card reveal-up" data-category="interiores">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800"
-                                alt="Sala de Estar Alphaville" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Interiores</span>
-                                    <h3>Living Alphaville</h3>
-                                    <p>Sala de estar com paleta neutra, madeira de demolição e mármore travertino.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i>
-                                        Alphaville Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 5 -->
-                    <div class="portfolio-card reveal-up" data-category="residencial">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=800"
-                                alt="Residência Parque das Águas" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Residencial</span>
-                                    <h3>Residência Parque das Águas</h3>
-                                    <p>Casa térrea com 4 suítes e linguagem contemporânea.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Parque
-                                        das Águas, Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 6 - Grande -->
-                    <div class="portfolio-card portfolio-card-lg reveal-up" data-category="interiores">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200"
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800"
                                 alt="Penthouse Jardim das Américas" loading="lazy">
                             <div class="portfolio-card-overlay">
                                 <div class="portfolio-card-info">
                                     <span class="portfolio-card-tag">Interiores</span>
                                     <h3>Penthouse Jardim das Américas</h3>
-                                    <p>Cobertura duplex com vista panorâmica, cozinha gourmet e terraço com cascata
-                                        decorativa.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim
-                                        das Américas, Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 7 -->
-                    <div class="portfolio-card reveal-up" data-category="comercial">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
-                                alt="Escritório Boulevard" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Comercial</span>
-                                    <h3>Escritório Boulevard Shopping</h3>
-                                    <p>Sala comercial moderna com design biofílico e ergonômico.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Av. do
-                                        CPA, Cuiabá</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 8 -->
-                    <div class="portfolio-card reveal-up" data-category="residencial">
-                        <div class="portfolio-card-img">
-                            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=800"
-                                alt="Casa Bosque da Saúde" loading="lazy">
-                            <div class="portfolio-card-overlay">
-                                <div class="portfolio-card-info">
-                                    <span class="portfolio-card-tag">Residencial</span>
-                                    <h3>Casa Bosque da Saúde</h3>
-                                    <p>Concreto, vidro e jardim vertical: uma residência sustentável e elegante.</p>
-                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Bosque
-                                        da Saúde, Cuiabá</span>
+                                    <p>Cobertura duplex com vista panorâmica, cozinha gourmet e terraço com cascata decorativa.</p>
+                                    <span class="portfolio-card-location"><i class="fas fa-map-marker-alt"></i> Jardim das Américas, Cuiabá</span>
                                 </div>
                             </div>
                         </div>
@@ -446,6 +491,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+            <img src="" alt="Projeto em destaque" id="lightboxImg">
+        </div>
 
         <!-- ========== CTA PARALLAX ========== -->
         <section class="cta-parallax">

@@ -1,5 +1,6 @@
 // ============================================
 // JESSIKA RODRIGUES — Main JavaScript
+// Enhanced with Lightbox, Tilt, Typing
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +11,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobileMenu');
     const navLinks = document.getElementById('navLinks');
     const contactForm = document.getElementById('contactForm');
+    
+    // ---- 0. Custom Cursor ----
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Loop de animação suave para o cursor (easing)
+        function animateCursor() {
+            let distX = mouseX - cursorX;
+            let distY = mouseY - cursorY;
+
+            cursorX = cursorX + (distX * 0.15); // fator de suavidade
+            cursorY = cursorY + (distY * 0.15);
+
+            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hover states em botões e links
+        const interactiveEle = document.querySelectorAll('a, button, .btn, .portfolio-card, input, textarea');
+        interactiveEle.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+
+        // Texto "VER PROJETO" no grid de portfolio
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+        portfolioCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                cursor.setAttribute('data-text', 'VER PROJETO');
+                cursor.classList.add('cursor-text-active');
+            });
+            card.addEventListener('mouseleave', () => {
+                cursor.removeAttribute('data-text');
+                cursor.classList.remove('cursor-text-active');
+            });
+        });
+    }
 
     // ---- 1. Preloader ----
     window.addEventListener('load', () => {
@@ -165,13 +213,148 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- 9. Parallax Effect (subtle) ----
+    // ---- 9. Parallax Effect (Aprimorado com rAF) ----
+    const parallaxBg = document.querySelector('.cta-parallax');
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        const parallaxBg = document.querySelector('.cta-parallax');
-        if (parallaxBg) {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.3;
-            parallaxBg.style.backgroundPositionY = `${rate}px`;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (parallaxBg) {
+                    const scrolled = window.scrollY;
+                    const rate = scrolled * 0.4;
+                    // Uso correto mantendo cobertura e centralização
+                    parallaxBg.style.backgroundPosition = `center calc(50% + ${rate}px)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
     });
+
+    // ---- 10. Lightbox ----
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    if (lightbox && lightboxImg) {
+        // Open lightbox on portfolio card click
+        portfolioCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('.portfolio-card-img img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeLightbox();
+            });
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // ---- 11. Card Tilt Effect ----
+    portfolioCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -3;
+            const rotateY = ((x - centerX) / centerX) * 3;
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale(1)';
+            card.style.transition = 'transform 0.5s ease';
+        });
+
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'transform 0.1s ease';
+        });
+    });
+
+    // ---- 12. Hero Typing Effect ----
+    const heroAccent = document.querySelector('.hero-title-accent');
+    if (heroAccent) {
+        const words = ['experiências.', 'sonhos.', 'arte.', 'sofisticação.'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        // Add cursor element
+        const cursor = document.createElement('span');
+        cursor.classList.add('typing-cursor');
+        heroAccent.parentNode.insertBefore(cursor, heroAccent.nextSibling);
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                heroAccent.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                heroAccent.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2500; // pause at complete word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start typing effect after preloader
+        setTimeout(() => {
+            heroAccent.textContent = '';
+            typeEffect();
+        }, 2200);
+    }
+
+    // ---- 13. Sobre Parallax ----
+    const sobreImg = document.querySelector('.sobre-img-wrapper img');
+    if (sobreImg) {
+        window.addEventListener('scroll', () => {
+            const rect = sobreImg.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                const offset = (rect.top - window.innerHeight / 2) * 0.08;
+                sobreImg.style.transform = `translateY(${offset}px) scale(1.05)`;
+            }
+        });
+    }
 });
