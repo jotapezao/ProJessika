@@ -1693,35 +1693,25 @@ header.scrolled {
 /* ---- Scroll Animations ---- */
 .reveal-up {
     opacity: 0;
-    transform: translateY(50px);
-    clip-path: inset(100% 0 0 0);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-                clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 .reveal-left {
     opacity: 0;
-    transform: translateX(-50px);
-    clip-path: inset(0 100% 0 0);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-                clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(-40px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 .reveal-right {
     opacity: 0;
-    transform: translateX(50px);
-    clip-path: inset(0 0 0 100%);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-                clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(40px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 .revealed {
     opacity: 1 !important;
     transform: translate(0) !important;
-    clip-path: inset(0 0 0 0) !important;
 }
 
 /* ---- PROCESSO ---- */
