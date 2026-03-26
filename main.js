@@ -60,11 +60,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- 1. Preloader ----
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            if (preloader) preloader.classList.add('hidden');
-        }, 1800);
-    });
+    function hidePreloader() {
+        if (preloader) {
+            preloader.classList.add('hidden');
+            // Re-check reveals after preloader is gone
+            setTimeout(() => {
+                revealElements.forEach(el => revealObserver.observe(el));
+            }, 500);
+        }
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(hidePreloader, 1500);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(hidePreloader, 1500);
+        });
+    }
+
+    // Safety fallback: Hide preloader after 4 seconds anyway
+    setTimeout(hidePreloader, 4000);
 
     // ---- 2. Header Scroll ----
     let lastScroll = 0;
